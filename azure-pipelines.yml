@@ -52,5 +52,5 @@ stages:
 
           - task: PublishPipelineArtifact@1
             inputs:
-              targetPath: '$(Pipeline.Workspace)/target/plugins/WebGoat-Lessons.zip'
+              targetPath: '$(Build.SourcesDirectory)/target/plugins/WebGoat-Lessons.zip'
               publishLocation: 'pipeline'
