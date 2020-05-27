@@ -47,7 +47,7 @@ stages:
 
           - task: CmdLine@2
             inputs:
-              script: 'zip WebGoat-Lessons.zip'
+              script: 'zip WebGoat-Lessons.zip *.jar'
               workingDirectory: 'target/plugins'
 
           - task: PublishPipelineArtifact@1
