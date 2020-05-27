@@ -44,3 +44,13 @@ stages:
               mavenAuthenticateFeed: false
               effectivePomSkip: false
               sonarQubeRunAnalysis: false
+
+          - task: CmdLine@2
+            inputs:
+              script: 'zip WebGoat-Lessons.zip'
+              workingDirectory: 'target/plugins'
+
+          - task: PublishPipelineArtifact@1
+            inputs:
+              targetPath: '$(Pipeline.Workspace)/target/plugins/WebGoat-Lessons.zip'
+              publishLocation: 'pipeline'
